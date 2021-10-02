@@ -44,7 +44,7 @@ async function handleRequest(event) {
     }
 
     if (!authorized) {
-      return Response.redirect("https://" + redirectUrl)
+      return Response.redirect(redirectUrl)
     }
 
     response = await getAssetFromKV(event)
