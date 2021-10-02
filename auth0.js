@@ -26,7 +26,7 @@ const exchangeCode = async code => {
   })
 
   return persistAuth(
-    await fetch(AUTH0_DOMAIN + '/oauth/token', {
+    await fetch("https://" + AUTH0_DOMAIN + '/oauth/token', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body,
